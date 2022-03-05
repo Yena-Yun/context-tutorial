@@ -1,5 +1,12 @@
-import { useState } from "react";
-import ColorContext from "./context";
+import { createContext, useState } from "react";
+
+const ColorContext = createContext({
+  state: { color: "black", subColor: "red" },
+  actions: {
+    setColor: () => {},
+    setSubColor: () => {},
+  },
+});
 
 const ColorProvider = ({ children }) => {
   const [color, setColor] = useState("black");
@@ -18,3 +25,5 @@ const ColorProvider = ({ children }) => {
 const { Consumer: ColorConsumer } = ColorContext;
 
 export { ColorProvider, ColorConsumer };
+
+export default ColorContext;

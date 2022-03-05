@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import ColorContext from "../contexts/context";
+import ColorContext from "../contexts/color";
 
 const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 
